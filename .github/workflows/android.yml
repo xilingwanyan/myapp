@@ -1,4 +1,4 @@
-name: Android CI
+name: Build APK
 
 on:
   push:
@@ -22,9 +22,9 @@ jobs:
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
-    - name: Build with Gradle Debug
+    - name: Build Debug APK with Gradle
       run: ./gradlew assembleDebug
-    - name: Upload APK-debug
+    - name: Upload Debug APK
       uses: actions/upload-artifact@v4
       with:
         name: app-debug
