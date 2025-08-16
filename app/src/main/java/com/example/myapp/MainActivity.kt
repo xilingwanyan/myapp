@@ -26,7 +26,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.border
-
+import androidx.compose.ui.graphics.Paint
+import androidx.compose.ui.graphics.painter.Painter
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -56,11 +57,17 @@ fun zhs(zhd: zh) {
             Text(zhd.q)
             Text(zhd.w)
         }
-        Image(
-            painter = painterResource(R.drawable.image2),
-            contentDescription = "一个图片"
-            alpha = 0.5
-        )
+        Box{
+            Image(
+                painter = painterResource(R.drawable.image2),
+                contentDescription = "一个图片" ,
+                alpha = 0.5f
+            )
+            Column{
+                Text("This is a image")
+                Text("But alpha = 0.5f , also it hava text")
+            }
+        }
     }
 }
 
