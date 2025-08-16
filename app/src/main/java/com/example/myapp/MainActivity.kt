@@ -50,12 +50,17 @@ fun zhs(zhd: zh) {
     Column{
         Image(
             painter = painterResource(R.drawable.image1),
-            contentDescription = "What is this?",
+            contentDescription = "一个图片"
         )
         Column{
             Text(zhd.q)
             Text(zhd.w)
         }
+        Image(
+            painter = painterResource(R.drawable.image2),
+            contentDescription = "一个图片"
+            alpha = 0.5
+        )
     }
 }
 
