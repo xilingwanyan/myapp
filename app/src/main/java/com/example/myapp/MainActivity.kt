@@ -3,31 +3,41 @@ package com.example.myapp
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.foundation.layout.fillMaxSize
+//import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+//import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapp.ui.theme.MyComposeApplicationTheme
 //---
-import androidx.compose.foundation.layout.Column
+/*import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.Image
-import androidx.compose.ui.res.painterResource
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
-import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.width*/
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.ui.draw.clip
+import androidx.compose.foundation.Image
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
+//import androidx.compose.ui.draw.clip
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.foundation.border
 import androidx.compose.ui.graphics.Paint
 import androidx.compose.ui.graphics.painter.Painter
+import androidx.compose.foundation.background
+//import androidx.compose.foundation.layout.padding
+import androidx.compose.ui.graphics.Color
+//import androidx.compose.ui.draw.blur
+//import androidx.compose.ui.draw.alpha
+import androidx.compose.ui.draw.*
+import androidx.compose.ui.*
+import androidx.compose.ui.geometry.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,7 +45,7 @@ class MainActivity : ComponentActivity() {
         setContent { //定义活动布局
             MyComposeApplicationTheme { //主题
                 Surface {
-                    zhs(zh("Hello World!!","ohMyApp"))
+                    bj(zh("Hello World!!","ohMyApp"))
                 }
             }
         }
@@ -43,29 +53,55 @@ class MainActivity : ComponentActivity() {
 }
 data class zh(val q: String , val w: String)
 @Composable
-fun texts(name: String) {
-    Text(name)
+fun bj(zhds: zh) {
+    Box{
+        Image(
+            painter = painterResource(R.drawable.image3),
+            contentDescription = "一个图片" ,
+            modifier = Modifier.blur(1.dp)
+                .fillMaxSize()
+        )
+        zhs(zhds)
+    }
 }
 @Composable
 fun zhs(zhd: zh) {
-    Column{
+    Column(
+        /*modifier = Modifier.background(Color.Blue) ,
+        verticalArrangement = Arrangement.Bottom*/
+    ){
         Image(
             painter = painterResource(R.drawable.image1),
             contentDescription = "一个图片"
         )
-        Column{
-            Text(zhd.q)
-            Text(zhd.w)
-        }
         Box{
+            /*Canvas(
+                modifier = Modifier.fillMaxSize()
+                    .alpha(0.4f)
+                    .blur(7.dp)
+            ){
+                drawRoundRect(
+                    color = Color.Black ,
+                    cornerRadius = CornerRadius(30f , 30f)
+                )
+            }*/
+            Column{
+                Text(zhd.q)
+                Text(zhd.w)
+            }
+        }
+        Box/*(
+            modifier = Modifier.background(Color.Black)
+        )*/{
             Image(
                 painter = painterResource(R.drawable.image2),
                 contentDescription = "一个图片" ,
-                alpha = 0.5f
+                alpha = 0.7f ,
+                modifier = Modifier.blur(7.dp)
             )
             Column{
                 Text("This is a image")
-                Text("But alpha = 0.5f , also it hava text")
+                Text("But alpha = 0.7f , also it hava text")
             }
         }
     }
