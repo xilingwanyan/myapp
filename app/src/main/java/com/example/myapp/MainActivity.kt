@@ -92,7 +92,7 @@ fun zhs(zhd: zh) {
                     .fillMaxWidth()
                     .height(60.dp)
                     .border(1.5.dp , Color(0xFF62D002))
-                    .padding(3.dp)
+                    .padding(1.5.dp)
                     .alpha(0.9f)
             ){
                 drawRoundRect(
