@@ -107,7 +107,8 @@ fun zhs(zhd: zh) {
                 )
             }
             Column(
-                padding = 2.dp
+                modifier = Moifier
+                    .padding(2.dp)
             ){
                 Text(zhd.q)
                 Text(zhd.w)
