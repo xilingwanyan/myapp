@@ -21,7 +21,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width*/
 import androidx.compose.foundation.shape.CircleShape
-import androidx.compose.foundation.Image
+//import androidx.compose.foundation.Image
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 //import androidx.compose.ui.draw.clip
@@ -38,6 +38,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.draw.*
 import androidx.compose.ui.*
 import androidx.compose.ui.geometry.*
+import androidx.compose.ui.graphics.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -74,7 +75,6 @@ fun zhs(zhd: zh) {
             painter = painterResource(R.drawable.image1),
             contentDescription = "一个图片"
         )
-        Box{
             /*Canvas(
                 modifier = Modifier.fillMaxSize()
                     .alpha(0.4f)
@@ -85,14 +85,38 @@ fun zhs(zhd: zh) {
                     cornerRadius = CornerRadius(30f , 30f)
                 )
             }*/
+        Box{
+            Canvas(
+                modifier = Modifier
+                    //.background(Color(0xFF1A121C))
+                    .fillMaxWidth()
+                    .height(60.dp)
+                    .border(1.5.dp , Color(0xFF62D002))
+                    .padding(3.dp)
+                    .alpha(0.9f)
+            ){
+                drawRoundRect(
+                    brush = Brush.horizontalGradient(
+                        colors = listOf(
+                            Color(0xFF1D0316) ,
+                            Color(0xFF03071D) ,
+                            Color(0xFf0A1D14)
+                        )
+                    ),
+                    cornerRadius = CornerRadius(17f , 17f)
+                )
+            }
             Column{
                 Text(zhd.q)
                 Text(zhd.w)
+                Text("very Good")
             }
         }
-        Box/*(
-            modifier = Modifier.background(Color.Black)
-        )*/{
+        Box(
+            modifier = Modifier
+                .border(3.dp , Color(0xFF3E2CD6))
+                .padding(3.dp)
+        ){
             Image(
                 painter = painterResource(R.drawable.image2),
                 contentDescription = "一个图片" ,

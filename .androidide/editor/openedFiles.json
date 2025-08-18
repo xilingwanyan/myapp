@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 37,
-          "index": 3431,
-          "line": 103
+          "column": 53,
+          "index": 3204,
+          "line": 93
         },
         "start": {
-          "column": 37,
-          "index": 3431,
-          "line": 103
+          "column": 53,
+          "index": 3204,
+          "line": 93
         }
       }
     }
