@@ -90,9 +90,9 @@ fun zhs(zhd: zh) {
                 modifier = Modifier
                     //.background(Color(0xFF1A121C))
                     .fillMaxWidth()
-                    .height(60.dp)
-                    .border(1.5.dp , Color(0xFF62D002))
-                    .padding(1.5.dp)
+                    .height(64.dp)
+                    //.border(1.5.dp , Color(0xFF62D002))
+                    //.padding(1.5.dp)
                     .alpha(0.9f)
             ){
                 drawRoundRect(
@@ -103,10 +103,12 @@ fun zhs(zhd: zh) {
                             Color(0xFf0A1D14)
                         )
                     ),
-                    cornerRadius = CornerRadius(17f , 17f)
+                    cornerRadius = CornerRadius(20f , 20f)
                 )
             }
-            Column{
+            Column(
+                padding = 2.dp
+            ){
                 Text(zhd.q)
                 Text(zhd.w)
                 Text("very Good")
