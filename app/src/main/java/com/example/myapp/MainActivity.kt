@@ -112,6 +112,7 @@ fun zhs(zhd: zh) {
             ){
                 Text(zhd.q , modifier = Modifier
                     .border(2.dp , Color(0xFF385276))
+                    .clickable {}
                 )
                 Text(zhd.w)
                 Text("very Good")
