@@ -54,7 +54,7 @@ class MainActivity : ComponentActivity() {
 }
 data class zh(val q: String , val w: String)
 @Composable
-fun bj(zhds: zh) {
+fun bj(zhds: zh) { //背景实现
     Box{
         Image(
             painter = painterResource(R.drawable.image3),
@@ -71,7 +71,7 @@ fun zhs(zhd: zh) {
         /*modifier = Modifier.background(Color.Blue) ,
         verticalArrangement = Arrangement.Bottom*/
     ){
-        Image(
+        Image( //首张图片
             painter = painterResource(R.drawable.image1),
             contentDescription = "一个图片"
         )
@@ -85,12 +85,12 @@ fun zhs(zhd: zh) {
                     cornerRadius = CornerRadius(30f , 30f)
                 )
             }*/
-        Box{
+        Box{ //text实现
             Canvas(
                 modifier = Modifier
                     //.background(Color(0xFF1A121C))
                     .fillMaxWidth()
-                    .height(64.dp)
+                    .height(66.dp)
                     //.border(1.5.dp , Color(0xFF62D002))
                     //.padding(1.5.dp)
                     .alpha(0.9f)
@@ -110,12 +110,14 @@ fun zhs(zhd: zh) {
                 modifier = Modifier
                     .padding(2.dp)
             ){
-                Text(zhd.q)
+                Text(zhd.q , modifier = Modifier
+                    .border(2.dp , Color(0xFF385276))
+                )
                 Text(zhd.w)
                 Text("very Good")
             }
         }
-        Box(
+        Box( //图片+文字实现
             modifier = Modifier
                 .border(3.dp , Color(0xFF3E2CD6))
                 .padding(3.dp)
