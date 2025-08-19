@@ -83,4 +83,4 @@ lint/tmp/
 # lint/reports/
 
 #my
-gitbulid.sh
+/gitbulid.sh
