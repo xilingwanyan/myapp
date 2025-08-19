@@ -14,22 +14,7 @@
           "line": 114
         }
       }
-    },
-    {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.gitignore",
-      "selection": {
-        "end": {
-          "column": 8,
-          "index": 1441,
-          "line": 85
-        },
-        "start": {
-          "column": 8,
-          "index": 1441,
-          "line": 85
-        }
-      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.gitignore"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
 }
