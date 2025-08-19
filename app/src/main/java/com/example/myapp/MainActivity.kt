@@ -4,10 +4,6 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 //import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.Surface
-import androidx.compose.material3.Text
-import androidx.compose.runtime.Composable
 //import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.myapp.ui.theme.MyComposeApplicationTheme
@@ -22,8 +18,6 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width*/
 import androidx.compose.foundation.shape.CircleShape
 //import androidx.compose.foundation.Image
-import androidx.compose.foundation.*
-import androidx.compose.foundation.layout.*
 //import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
@@ -35,10 +29,15 @@ import androidx.compose.foundation.background
 import androidx.compose.ui.graphics.Color
 //import androidx.compose.ui.draw.blur
 //import androidx.compose.ui.draw.alpha
+//----------------------------------------------------*
 import androidx.compose.ui.draw.*
 import androidx.compose.ui.*
 import androidx.compose.ui.geometry.*
 import androidx.compose.ui.graphics.*
+import androidx.compose.material3.*
+import androidx.compose.foundation.*
+import androidx.compose.foundation.layout.*
+import androidx.compose.runtime.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -67,6 +66,7 @@ fun bj(zhds: zh) { //背景实现
 }
 @Composable
 fun zhs(zhd: zh) {
+    var showDialog1 by remember {mutableStateOf(false)}
     Column(
         /*modifier = Modifier.background(Color.Blue) ,
         verticalArrangement = Arrangement.Bottom*/
@@ -112,7 +112,9 @@ fun zhs(zhd: zh) {
             ){
                 Text(zhd.q , modifier = Modifier
                     .border(2.dp , Color(0xFF385276))
-                    .clickable {}
+                    .clickable {
+                        showDialog1 =true
+                    }
                 )
                 Text(zhd.w)
                 Text("very Good")
@@ -134,6 +136,18 @@ fun zhs(zhd: zh) {
                 Text("But alpha = 0.7f , also it hava text")
             }
         }
+    }
+    if (showDialog1) {
+        AlertDialog(
+            {showDialog1 = false} ,
+            {
+                (
+                    {showDialog1 = false}
+                )
+                {Text("确定")}
+            },
+            title = {Text("Hello")} ,
+            text = {Text("Hello World")})
     }
 }
 
