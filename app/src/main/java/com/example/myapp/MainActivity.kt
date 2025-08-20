@@ -164,9 +164,16 @@ fun zhs(zhd: zh) {
         }
         BottomAppBar(
             modifier = Modifier
-            .size(150.dp , 50.dp)
+            .size(270.dp , 50.dp)
         ) {
-            Text("This is a BottomAppBar")
+            Row(
+                modifier = Modifier.
+                    fillMaxSize() ,
+                verticalAlignment = Alignment.CenterVertically ,
+                horizontalArrangement = Arrangement.SpaceEvenly
+            ){
+                Text("This is a BottomAppBar")
+            }
         }
     }
     if (showDialog1) {
