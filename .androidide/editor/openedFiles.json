@@ -1,0 +1,35 @@
+{
+  "allFiles": [
+    {
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/build.yml",
+      "selection": {
+        "end": {
+          "column": 0,
+          "index": 101,
+          "line": 7
+        },
+        "start": {
+          "column": 0,
+          "index": 101,
+          "line": 7
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/clean.yml",
+      "selection": {
+        "end": {
+          "column": 20,
+          "index": 37,
+          "line": 3
+        },
+        "start": {
+          "column": 2,
+          "index": 19,
+          "line": 3
+        }
+      }
+    }
+  ],
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/build.yml"
+}
