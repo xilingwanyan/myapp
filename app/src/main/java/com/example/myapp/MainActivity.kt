@@ -113,6 +113,7 @@ fun zhs(zhd: zh) {
                 Text(zhd.q , modifier = Modifier
                     .border(2.dp , Color(0xFF385276))
                     .clickable {
+                        println("更改showDialog1为true")
                         showDialog1 =true
                     }
                 )
