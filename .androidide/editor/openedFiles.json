@@ -1,20 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml",
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 6,
+          "index": 5010,
+          "line": 151
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 6,
+          "index": 5010,
+          "line": 151
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
 }
