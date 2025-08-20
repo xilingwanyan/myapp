@@ -29,6 +29,7 @@ import androidx.compose.foundation.background
 import androidx.compose.ui.graphics.Color
 //import androidx.compose.ui.draw.blur
 //import androidx.compose.ui.draw.alpha
+import android.util.Log
 //----------------------------------------------------*
 import androidx.compose.ui.draw.*
 import androidx.compose.ui.*
@@ -113,7 +114,7 @@ fun zhs(zhd: zh) {
                 Text(zhd.q , modifier = Modifier
                     .border(2.dp , Color(0xFF385276))
                     .clickable {
-                        println("更改showDialog1为true")
+                        Log.i("MainActivity" , "更改showDialog1为true")
                         showDialog1 =true
                     }
                 )
@@ -133,9 +134,39 @@ fun zhs(zhd: zh) {
                 modifier = Modifier.blur(7.dp)
             )
             Column{
-                Text("This is a image")
+                BadgedBox(
+                    {
+                        Text("yes")
+                    }
+                ){
+                    Text("This is a image")
+                }
                 Text("But alpha = 0.7f , also it hava text")
+                Button(
+                    {
+                        Log.i("MainActivity" , "更改showDialog1为true")
+                        showDialog1 =true
+                    },
+                    content = {
+                        Text("Button")
+                    }
+                )
+                AssistChip(
+                    {
+                        Log.i("MainActivity" , "更改showDialog1为true")
+                        showDialog1 =true
+                    },
+                    {
+                        Text("AssistChip")
+                    }
+                )
             }
+        }
+        BottomAppBar(
+            modifier = Modifier
+            .size(150.dp , 50.dp)
+        ) {
+            Text("This is a BottomAppBar")
         }
     }
     if (showDialog1) {
@@ -149,7 +180,13 @@ fun zhs(zhd: zh) {
                 }
             },
             title = {Text("Hello")} ,
-            text = {Text("Hello World")}
+            text = {
+                Column {
+                    Text("Hello World")
+                    Badge() {Text("Hi")}
+                    Text("ohMyDialog")
+                }
+            }
         )
     }
 }
