@@ -14,7 +14,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.gitignore",
+      "selection": {
+        "end": {
+          "column": 2,
+          "index": 1435,
+          "line": 85
+        },
+        "start": {
+          "column": 2,
+          "index": 1435,
+          "line": 85
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.gitignore"
 }
