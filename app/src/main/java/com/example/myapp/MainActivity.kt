@@ -148,7 +148,7 @@ fun zhs(zhd: zh) {
                 }
             },
             title = {Text("Hello")} ,
-            text = {Text("Hello World\nohMyDialog!")}
+            text = {Text("Hello World")}
         )
     }
 }
