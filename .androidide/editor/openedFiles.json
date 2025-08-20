@@ -4,14 +4,14 @@
       "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml",
       "selection": {
         "end": {
-          "column": 30,
-          "index": 490,
-          "line": 25
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 30,
-          "index": 490,
-          "line": 25
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }
