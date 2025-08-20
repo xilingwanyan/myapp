@@ -4,29 +4,29 @@
       "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 74,
+          "index": 372,
+          "line": 5
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 74,
+          "index": 372,
+          "line": 5
         }
       }
     },
     {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.gitignore",
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 2,
-          "index": 1435,
-          "line": 85
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 2,
-          "index": 1435,
-          "line": 85
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }
