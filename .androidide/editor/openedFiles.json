@@ -14,37 +14,7 @@
           "line": 151
         }
       }
-    },
-    {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/gradle.properties",
-      "selection": {
-        "end": {
-          "column": 24,
-          "index": 455,
-          "line": 8
-        },
-        "start": {
-          "column": 24,
-          "index": 455,
-          "line": 8
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml",
-      "selection": {
-        "end": {
-          "column": 30,
-          "index": 490,
-          "line": 25
-        },
-        "start": {
-          "column": 30,
-          "index": 490,
-          "line": 25
-        }
-      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
 }
