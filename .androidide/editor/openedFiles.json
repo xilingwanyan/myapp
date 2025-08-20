@@ -1,20 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt",
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 12,
-          "index": 4877,
-          "line": 147
+          "column": 0,
+          "index": 0,
+          "line": 0
         },
         "start": {
-          "column": 12,
-          "index": 4877,
-          "line": 147
+          "column": 0,
+          "index": 0,
+          "line": 0
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts"
 }

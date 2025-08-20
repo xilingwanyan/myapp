@@ -141,10 +141,11 @@ fun zhs(zhd: zh) {
         AlertDialog(
             {showDialog1 = false} ,
             {
-                (
+                TextButton(
                     {showDialog1 = false}
-                )
-                {Text("确定")}
+                ) {
+                    Text("确定")
+                }
             },
             title = {Text("Hello")} ,
             text = {Text("Hello World")})
