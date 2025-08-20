@@ -1,35 +1,20 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts",
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml",
       "selection": {
         "end": {
-          "column": 74,
-          "index": 372,
-          "line": 5
+          "column": 26,
+          "index": 486,
+          "line": 25
         },
         "start": {
-          "column": 74,
-          "index": 372,
-          "line": 5
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/build.gradle.kts",
-      "selection": {
-        "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        },
-        "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 26,
+          "index": 486,
+          "line": 25
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/android.yml"
 }
