@@ -90,31 +90,33 @@ fun zhs(zhd: zh) {
                 )
             }*/
         Column(
-                modifier = Modifier
-                //.background(Color(0xFF1A121C))
-                .fillMaxWidth()
-                .height(73.dp)
-                //.border(1.5.dp , Color(0xFF62D002))
-                //.padding(1.5.dp)
-                .alpha(0.9f)
-                .drawBehind{
-                    drawRoundRect(
-                        brush = Brush.horizontalGradient(
-                            colors = listOf(
-                                Color(0xFF1D0316) ,
-                                Color(0xFF03071D) ,
-                                Color(0xFf0A1D14)
-                            )
-                        ),
-                        cornerRadius = CornerRadius(20f , 20f)
-                    )
-                }
-                .padding(2.dp)
-         )
+            modifier = Modifier
+            //.background(Color(0xFF1A121C))
+            .fillMaxWidth()
+            .height(73.dp)
+            //.border(1.5.dp , Color(0xFF62D002))
+            //.padding(1.5.dp)
+            .alpha(0.9f)
+            .drawBehind{
+                drawRoundRect(
+                    brush = Brush.horizontalGradient(
+                        colors = listOf(
+                            Color(0xFF1D0316) ,
+                            Color(0xFF03071D) ,
+                            Color(0xFf0A1D14)
+                        )
+                    ),
+                    cornerRadius = CornerRadius(20f , 20f)
+                )
+            }
+            .padding(2.dp)
+        )
         {
-            Text("${zhd.q} hava clickable" , modifier = Modifier
+            Text(
+                "${zhd.q} hava clickable" ,
+                modifier = Modifier
                 .border(2.dp , Color(0xFF385276))
-                .clickable {
+                .clickable{
                     Log.i("MainActivity" , "更改showDialog1为true")
                     Int1 += 1
                     showDialog1 = true
@@ -125,8 +127,19 @@ fun zhs(zhd: zh) {
         }
         Box( //图片+文字实现
             modifier = Modifier
-                .border(3.dp , Color(0xFF3E2CD6))
-                .padding(3.dp)
+            .border(
+                BorderStroke(
+                    2.dp ,
+                    Brush.horizontalGradient(
+                        colors = listOf(
+                            Color(0xFFFF5CDE) ,
+                            Color(0xFFA56DFF) ,
+                            Color(0xFf142BFF)
+                        )
+                    )
+                )
+            )
+            .padding(2.dp)
         )
         {
             Image(
@@ -174,7 +187,7 @@ fun zhs(zhd: zh) {
         {
             Row(
                 modifier = Modifier
-                    .fillMaxSize() ,
+                .fillMaxSize() ,
                 verticalAlignment = Alignment.CenterVertically ,
                 horizontalArrangement = Arrangement.SpaceEvenly
             ){
