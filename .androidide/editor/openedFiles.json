@@ -14,7 +14,22 @@
           "line": 0
         }
       }
+    },
+    {
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/clean.yml",
+      "selection": {
+        "end": {
+          "column": 7,
+          "index": 52,
+          "line": 6
+        },
+        "start": {
+          "column": 7,
+          "index": 52,
+          "line": 6
+        }
+      }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/clean.yml"
 }
