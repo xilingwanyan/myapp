@@ -71,8 +71,9 @@ fun zhs(zhd: zh) {
     Column(
         /*modifier = Modifier.background(Color.Blue) ,
         verticalArrangement = Arrangement.Bottom*/
-    ){
-        Image( //首张图片
+    )
+    {
+         Image( //首张图片
             painter = painterResource(R.drawable.image1),
             contentDescription = "一个图片"
         )
@@ -80,14 +81,16 @@ fun zhs(zhd: zh) {
                 modifier = Modifier.fillMaxSize()
                     .alpha(0.4f)
                     .blur(7.dp)
-            ){
+            )
+            {
                 drawRoundRect(
                     color = Color.Black ,
                     cornerRadius = CornerRadius(30f , 30f)
                 )
             }*/
         Box (
-        ){ //text实现
+        )
+        { //text实现
             Canvas(
                 modifier = Modifier
                     //.background(Color(0xFF1A121C))
@@ -96,7 +99,8 @@ fun zhs(zhd: zh) {
                     //.border(1.5.dp , Color(0xFF62D002))
                     //.padding(1.5.dp)
                     .alpha(0.9f)
-            ){
+            )
+            {
                 drawRoundRect(
                     brush = Brush.horizontalGradient(
                         colors = listOf(
@@ -111,7 +115,8 @@ fun zhs(zhd: zh) {
             Column(
                 modifier = Modifier
                     .padding(2.dp)
-            ){
+            )
+            {
                 Text("${zhd.q} hava clickable" , modifier = Modifier
                     .border(2.dp , Color(0xFF385276))
                     .clickable {
@@ -127,7 +132,8 @@ fun zhs(zhd: zh) {
             modifier = Modifier
                 .border(3.dp , Color(0xFF3E2CD6))
                 .padding(3.dp)
-        ){
+        )
+        {
             Image(
                 painter = painterResource(R.drawable.image2),
                 contentDescription = "一个图片" ,
@@ -139,7 +145,8 @@ fun zhs(zhd: zh) {
                     {
                         Text("yes")
                     }
-                ){
+                )
+                {
                     Text("This is a image")
                 }
                 Text("But alpha = 0.7f , also it hava text")
@@ -166,7 +173,8 @@ fun zhs(zhd: zh) {
         BottomAppBar(
             modifier = Modifier
             .wrapContentSize()
-        ) {
+        )
+        {
             Row(
                 modifier = Modifier.
                     fillMaxSize() ,
@@ -183,7 +191,8 @@ fun zhs(zhd: zh) {
             {
                 TextButton(
                     {showDialog1 = false}
-                ) {
+                )
+                {
                     Text("确定")
                 }
             },
@@ -191,7 +200,9 @@ fun zhs(zhd: zh) {
             text = {
                 Column {
                     Text("Hello World")
-                    Badge() {Text("Hi")}
+                    Badge() {
+                        Text("Hi")
+                    }
                     Text("ohMyDialog")
                 }
             }
