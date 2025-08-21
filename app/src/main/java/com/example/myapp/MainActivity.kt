@@ -58,7 +58,7 @@ fun bj(zhds: zh) { //背景实现
     Box{
         Image(
             painter = painterResource(R.drawable.image3),
-            contentDescription = "一个图片" ,
+            contentDescription = "背景图片" ,
             modifier = Modifier.blur(1.dp)
                 .fillMaxSize()
         )
@@ -86,12 +86,13 @@ fun zhs(zhd: zh) {
                     cornerRadius = CornerRadius(30f , 30f)
                 )
             }*/
-        Box{ //text实现
+        Box (
+        ){ //text实现
             Canvas(
                 modifier = Modifier
                     //.background(Color(0xFF1A121C))
                     .fillMaxWidth()
-                    .height(66.dp)
+                    .height(73.dp)
                     //.border(1.5.dp , Color(0xFF62D002))
                     //.padding(1.5.dp)
                     .alpha(0.9f)
@@ -111,7 +112,7 @@ fun zhs(zhd: zh) {
                 modifier = Modifier
                     .padding(2.dp)
             ){
-                Text(zhd.q , modifier = Modifier
+                Text("${zhd.q} hava clickable" , modifier = Modifier
                     .border(2.dp , Color(0xFF385276))
                     .clickable {
                         Log.i("MainActivity" , "更改showDialog1为true")
@@ -164,7 +165,7 @@ fun zhs(zhd: zh) {
         }
         BottomAppBar(
             modifier = Modifier
-            .size(270.dp , 50.dp)
+            .wrapContentSize()
         ) {
             Row(
                 modifier = Modifier.
