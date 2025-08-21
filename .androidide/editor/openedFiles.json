@@ -4,32 +4,17 @@
       "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt",
       "selection": {
         "end": {
-          "column": 0,
-          "index": 0,
-          "line": 0
+          "column": 38,
+          "index": 5110,
+          "line": 151
         },
         "start": {
-          "column": 0,
-          "index": 0,
-          "line": 0
-        }
-      }
-    },
-    {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/clean.yml",
-      "selection": {
-        "end": {
-          "column": 7,
-          "index": 52,
-          "line": 6
-        },
-        "start": {
-          "column": 7,
-          "index": 52,
-          "line": 6
+          "column": 38,
+          "index": 5110,
+          "line": 151
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/.github/workflows/clean.yml"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
 }

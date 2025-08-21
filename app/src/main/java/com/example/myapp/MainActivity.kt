@@ -68,6 +68,7 @@ fun bj(zhds: zh) { //背景实现
 @Composable
 fun zhs(zhd: zh) {
     var showDialog1 by remember {mutableStateOf(false)}
+    var Int1 by remember {mutableIntStateOf(0)}
     Column(
         /*modifier = Modifier.background(Color.Blue) ,
         verticalArrangement = Arrangement.Bottom*/
@@ -88,45 +89,39 @@ fun zhs(zhd: zh) {
                     cornerRadius = CornerRadius(30f , 30f)
                 )
             }*/
-        Box (
-        )
-        { //text实现
-            Canvas(
+        Column(
                 modifier = Modifier
-                    //.background(Color(0xFF1A121C))
-                    .fillMaxWidth()
-                    .height(73.dp)
-                    //.border(1.5.dp , Color(0xFF62D002))
-                    //.padding(1.5.dp)
-                    .alpha(0.9f)
+                //.background(Color(0xFF1A121C))
+                .fillMaxWidth()
+                .height(73.dp)
+                //.border(1.5.dp , Color(0xFF62D002))
+                //.padding(1.5.dp)
+                .alpha(0.9f)
+                .drawBehind{
+                    drawRoundRect(
+                        brush = Brush.horizontalGradient(
+                            colors = listOf(
+                                Color(0xFF1D0316) ,
+                                Color(0xFF03071D) ,
+                                Color(0xFf0A1D14)
+                            )
+                        ),
+                        cornerRadius = CornerRadius(20f , 20f)
+                    )
+                }
+                .padding(2.dp)
+         )
+        {
+            Text("${zhd.q} hava clickable" , modifier = Modifier
+                .border(2.dp , Color(0xFF385276))
+                .clickable {
+                    Log.i("MainActivity" , "更改showDialog1为true")
+                    Int1 += 1
+                    showDialog1 = true
+                }
             )
-            {
-                drawRoundRect(
-                    brush = Brush.horizontalGradient(
-                        colors = listOf(
-                            Color(0xFF1D0316) ,
-                            Color(0xFF03071D) ,
-                            Color(0xFf0A1D14)
-                        )
-                    ),
-                    cornerRadius = CornerRadius(20f , 20f)
-                )
-            }
-            Column(
-                modifier = Modifier
-                    .padding(2.dp)
-            )
-            {
-                Text("${zhd.q} hava clickable" , modifier = Modifier
-                    .border(2.dp , Color(0xFF385276))
-                    .clickable {
-                        Log.i("MainActivity" , "更改showDialog1为true")
-                        showDialog1 =true
-                    }
-                )
-                Text(zhd.w)
-                Text("very Good")
-            }
+            Text(zhd.w)
+            Text("very Good")
         }
         Box( //图片+文字实现
             modifier = Modifier
@@ -153,7 +148,8 @@ fun zhs(zhd: zh) {
                 Button(
                     {
                         Log.i("MainActivity" , "更改showDialog1为true")
-                        showDialog1 =true
+                        Int1 += 1
+                        showDialog1 = true
                     },
                     content = {
                         Text("Button")
@@ -162,7 +158,8 @@ fun zhs(zhd: zh) {
                 AssistChip(
                     {
                         Log.i("MainActivity" , "更改showDialog1为true")
-                        showDialog1 =true
+                        Int1 += 1
+                        showDialog1 = true
                     },
                     {
                         Text("AssistChip")
@@ -172,12 +169,12 @@ fun zhs(zhd: zh) {
         }
         BottomAppBar(
             modifier = Modifier
-            .wrapContentSize()
+                .wrapContentSize()
         )
         {
             Row(
-                modifier = Modifier.
-                    fillMaxSize() ,
+                modifier = Modifier
+                    .fillMaxSize() ,
                 verticalAlignment = Alignment.CenterVertically ,
                 horizontalArrangement = Arrangement.SpaceEvenly
             ){
@@ -204,6 +201,7 @@ fun zhs(zhd: zh) {
                         Text("Hi")
                     }
                     Text("ohMyDialog")
+                    Text("$Int1 !")
                 }
             }
         )
