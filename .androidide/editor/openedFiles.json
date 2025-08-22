@@ -1,20 +1,50 @@
 {
   "allFiles": [
     {
-      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt",
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts",
       "selection": {
         "end": {
-          "column": 9,
-          "index": 4701,
-          "line": 143
+          "column": 43,
+          "index": 216,
+          "line": 3
         },
         "start": {
-          "column": 9,
-          "index": 4701,
-          "line": 143
+          "column": 43,
+          "index": 216,
+          "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/build.gradle.kts",
+      "selection": {
+        "end": {
+          "column": 24,
+          "index": 69,
+          "line": 3
+        },
+        "start": {
+          "column": 24,
+          "index": 69,
+          "line": 3
+        }
+      }
+    },
+    {
+      "file": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/gradle/wrapper/gradle-wrapper.properties",
+      "selection": {
+        "end": {
+          "column": 72,
+          "index": 137,
+          "line": 2
+        },
+        "start": {
+          "column": 72,
+          "index": 137,
+          "line": 2
         }
       }
     }
   ],
-  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/app/src/main/java/com/example/myapp/MainActivity.kt"
+  "selectedFile": "/storage/emulated/0/Android/data/.myproject/Android/myapp/myapp/build.gradle.kts"
 }

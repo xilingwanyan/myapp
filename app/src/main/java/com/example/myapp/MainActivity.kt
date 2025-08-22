@@ -30,8 +30,11 @@ import androidx.compose.ui.graphics.Color
 //import androidx.compose.ui.draw.blur
 //import androidx.compose.ui.draw.alpha
 import android.util.Log
+
+import androidx.compose.ui.unit.sp
 //----------------------------------------------------*
 import androidx.compose.ui.draw.*
+import androidx.compose.ui.text.font.*
 import androidx.compose.ui.*
 import androidx.compose.ui.geometry.*
 import androidx.compose.ui.graphics.*
@@ -67,6 +70,9 @@ fun bj(zhds: zh) { //背景实现
 }
 @Composable
 fun zhs(zhd: zh) {
+    val fontF = FontFamily(
+        Font(R.font.jetbrains_mono , FontWeight.Normal)
+    )
     var showDialog1 by remember {mutableStateOf(false)}
     var Int1 by remember {mutableIntStateOf(0)}
     Column(
@@ -120,7 +126,8 @@ fun zhs(zhd: zh) {
                     Log.i("MainActivity" , "更改showDialog1为true")
                     Int1 += 1
                     showDialog1 = true
-                }
+                },
+                color = Color(0xffEF9BFF)
             )
             Text(zhd.w)
             Text("very Good")
@@ -182,7 +189,7 @@ fun zhs(zhd: zh) {
         }
         BottomAppBar(
             modifier = Modifier
-                .wrapContentSize()
+            .wrapContentSize()
         )
         {
             Row(
@@ -191,7 +198,13 @@ fun zhs(zhd: zh) {
                 verticalAlignment = Alignment.CenterVertically ,
                 horizontalArrangement = Arrangement.SpaceEvenly
             ){
-                Text("This is a BottomAppBar")
+                Text(
+                    "This is a BottomAppBar" ,
+                    fontSize = 21.sp ,
+                    fontFamily = fontF ,
+                    fontWeight = FontWeight.Normal
+                    
+                )
             }
         }
     }
