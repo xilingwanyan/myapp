@@ -30,7 +30,6 @@ import androidx.compose.ui.graphics.Color
 //import androidx.compose.ui.draw.blur
 //import androidx.compose.ui.draw.alpha
 import android.util.Log
-
 import androidx.compose.ui.unit.sp
 //----------------------------------------------------*
 import androidx.compose.ui.draw.*
@@ -42,6 +41,7 @@ import androidx.compose.material3.*
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.*
+import androidx.compose.ui.text.style.*
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -75,6 +75,7 @@ fun zhs(zhd: zh) {
     )
     var showDialog1 by remember {mutableStateOf(false)}
     var Int1 by remember {mutableIntStateOf(0)}
+    var f1 by remember {mutableFloatStateOf(0f)}
     Column(
         /*modifier = Modifier.background(Color.Blue) ,
         verticalArrangement = Arrangement.Bottom*/
@@ -202,13 +203,35 @@ fun zhs(zhd: zh) {
                     "This is a BottomAppBar" ,
                     fontSize = 21.sp ,
                     fontFamily = fontF ,
-                    fontWeight = FontWeight.Normal
-                    
+                    fontWeight = FontWeight.Normal ,
+                    fontStyle = FontStyle.Italic ,
+                    textAlign = TextAlign.Center ,
+                    textDecoration = TextDecoration.Underline
+                )
+            }
+        }
+        Card(
+            modifier = Modifier
+            .size(100.dp , 100.dp)
+        )
+        {
+            Column(
+                modifier = Modifier
+                .fillMaxSize() ,
+                verticalArrangement = Arrangement.SpaceEvenly ,
+                horizontalAlignment = Alignment.CenterHorizontally
+            )
+            {
+                Text(
+                    "Card" ,
+                    textAlign = TextAlign.Center
                 )
             }
         }
     }
+    if (f1 >= 1f) {f1 = 0f}
     if (showDialog1) {
+        f1 += 0.005f
         AlertDialog(
             {showDialog1 = false} ,
             {
@@ -228,6 +251,9 @@ fun zhs(zhd: zh) {
                     }
                     Text("ohMyDialog")
                     Text("$Int1 !")
+                    CircularProgressIndicator(
+                        f1
+                    )
                 }
             }
         )
