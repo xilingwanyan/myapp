@@ -84,3 +84,4 @@ lint/tmp/
 
 #my
 /qgitbuild.sh
+/gradle.properties
