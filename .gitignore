@@ -86,3 +86,4 @@ lint/tmp/
 /qgitbuild.sh
 /gradle.properties
 /.androidide/
+/kls_database.db
