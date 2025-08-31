@@ -83,4 +83,4 @@ lint/tmp/
 # lint/reports/
 
 #my
-/qgitbuild.sh
+/kgitbuild.sh

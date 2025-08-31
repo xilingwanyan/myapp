@@ -1,4 +1,3 @@
-
 plugins {
     id("com.android.application")
     id("kotlin-android")
@@ -8,27 +7,30 @@ plugins {
 android {
     namespace = "com.example.myapp"
     compileSdk = 36
-    
     defaultConfig {
         applicationId = "com.example.myapp"
         minSdk = 29
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-        
-        vectorDrawables { 
-            useSupportLibrary = true
-        }
+
+        vectorDrawables { useSupportLibrary = true }
     }
     signingConfigs {
         create("release") {
-            storeFile = file("$rootDir/app/key/release/android-release.myapp.keystore")  // 密钥库路径
-            storePassword = "CNesynwW4lQ8X0XVQ1n"           // 密钥库密码
-            keyAlias = "myapp_release"                        // 密钥别名
-            keyPassword = "CNesynwW4lQ8X0XVQ1n"                  // 密钥密码（与storePassword相同）
+            storeFile = file("$rootDir/app/key/release/android-release.myapp.keystore") // 密钥库路径
+            storePassword = "CNesynwW4lQ8X0XVQ1n" // 密钥库密码
+            keyAlias = "myapp_release" // 密钥别名
+            keyPassword = "CNesynwW4lQ8X0XVQ1n" // 密钥密码（与storePassword相同）
+        }
+        create("debugs") {
+            storeFile = file("$rootDir/app/key/debug/android-debug.myapp.keystore") // 密钥库路径
+            storePassword = "wDIi5ca4t4Ajgp4vMYo" // 密钥库密码
+            keyAlias = "myapp_debug" // 密钥别名
+            keyPassword = "wDIi5ca4t4Ajgp4vMYo" // 密钥密码（与storePassword相同）
         }
     }
-    
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -38,38 +40,30 @@ android {
         release {
             signingConfig = signingConfigs.getByName("release")
             isMinifyEnabled = true
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+            proguardFiles(
+                    getDefaultProguardFile("proguard-android-optimize.txt"),
+                    "proguard-rules.pro"
+            )
         }
-        debug{
-            isMinifyEnabled = false
+        debug {
+            signingConfig = signingConfigs.getByName("debugs")
+            isMinifyEnabled = false 
         }
     }
 
-    buildFeatures {
-        
-        compose = true
-    }
+    buildFeatures { compose = true }
     composeOptions {
         // kotlinCompilerExtensionVersion = "1.5.15"
     }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
+    packaging { resources { excludes += "/META-INF/{AL2.0,LGPL2.1}" } }
 }
 
 /*tasks.withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile>().configureEach {
     kotlinOptions.jvmTarget = "17"
 }*/
-kotlin {
-    compilerOptions {
-        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17)
-    }
-}
+kotlin { compilerOptions { jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_17) } }
 
 dependencies {
-
     implementation(platform("androidx.compose:compose-bom:2025.08.00"))
 
     debugImplementation("androidx.compose.ui:ui-test-manifest")
