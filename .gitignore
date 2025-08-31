@@ -82,7 +82,7 @@ lint/outputs/
 lint/tmp/
 # lint/reports/
 
-#my
+# my
 /qgitbuild.sh
 /gradle.properties
 /.androidide/
