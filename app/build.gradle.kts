@@ -10,12 +10,12 @@ android {
     compileSdk = 35
     defaultConfig {
         applicationId = "com.example.myapp"
-        minSdk = 29
+        minSdk = 28
         targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-
         vectorDrawables { useSupportLibrary = true }
+
     }
     signingConfigs {
         create("release") {
@@ -23,12 +23,18 @@ android {
             storePassword = "CNesynwW4lQ8X0XVQ1n" // 密钥库密码
             keyAlias = "myapp_release" // 密钥别名
             keyPassword = "CNesynwW4lQ8X0XVQ1n" // 密钥密码（与storePassword相同）
+            enableV1Signing = false
+            enableV2Signing = true
+            enableV3Signing = true
         }
         create("debugs") {
             storeFile = file("$rootDir/app/key/debug/android-debug.myapp.keystore") // 密钥库路径
             storePassword = "wDIi5ca4t4Ajgp4vMYo" // 密钥库密码
             keyAlias = "myapp_debug" // 密钥别名
             keyPassword = "wDIi5ca4t4Ajgp4vMYo" // 密钥密码（与storePassword相同）
+            enableV1Signing = false
+            enableV2Signing = true
+            enableV3Signing = true
         }
     }
 
@@ -45,6 +51,7 @@ android {
                     getDefaultProguardFile("proguard-android-optimize.txt"),
                     "proguard-rules.pro"
             )
+            
         }
         debug {
             signingConfig = signingConfigs.getByName("debugs")
