@@ -88,5 +88,4 @@ lint/tmp/
 /.androidide/
 kls_database.db
 editorconfig
-/.keystore.properties
-/app/key
+/keystore.properties

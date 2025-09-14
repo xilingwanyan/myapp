@@ -4,6 +4,14 @@ plugins {
     id("org.jetbrains.kotlin.android")
 }
 
+val keyRelease: String by project
+val keyReleasePassword: String by project
+val keyReleaseAlias: String by project
+
+val keyDebug: String by project
+val keyDebugPassword: String by project
+val keyDebugAlias: String by project
+
 android {
     namespace = "com.example.myapp"
     compileSdk = 35
@@ -18,19 +26,19 @@ android {
     }
     signingConfigs {
         create("release") {
-            storeFile = file("${key.release}") // 密钥库路径
-            storePassword = "${key.release.password}" // 密钥库密码
-            keyAlias = "${key.release.alias}" // 密钥别名
-            keyPassword = "${key.release.password}" // 密钥密码（与storePassword相同）
+            storeFile = file(keyRelease) // 密钥库路径
+            storePassword = keyReleasePassword // 密钥库密码
+            keyAlias = keyReleaseAlias // 密钥别名
+            keyPassword = keyReleasePassword // 密钥密码（与storePassword相同）
             enableV1Signing = false
             enableV2Signing = true
             enableV3Signing = true
         }
         create("debugs") {
-            storeFile = file("${key.debug}") // 密钥库路径
-            storePassword = "${key.debug.password}" // 密钥库密码
-            keyAlias = "${key.debug.alias}" // 密钥别名
-            keyPassword = "${key.debug.password}" // 密钥密码（与storePassword相同）
+            storeFile = file(keyDebug) // 密钥库路径
+            storePassword = keyDebugPassword // 密钥库密码
+            keyAlias = keyDebugAlias // 密钥别名
+            keyPassword = keyDebugPassword // 密钥密码（与storePassword相同）
             enableV1Signing = false
             enableV2Signing = true
             enableV3Signing = true

@@ -16,6 +16,11 @@ jobs:
     - uses: actions/checkout@v4
     - name: Use CI properties
       run: cp gradle-ci.properties gradle.properties
+    - name: Inject keystore secrets
+      run: |
+        echo "$KEY_CONFIG" >> $GITHUB_WORKSPACE/gradle.properties
+      env:
+        KEY_CONFIG: ${{ secrets.KEY_CONFIG }}
     - name: Cache Gradle
       uses: actions/cache@v4
       with:
