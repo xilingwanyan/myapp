@@ -252,7 +252,7 @@ fun zhs(zhd: zh) {
                     Text("ohMyDialog")
                     Text("$Int1 !")
                     CircularProgressIndicator(
-                        f1
+                        progress = f1
                     )
                 }
             }

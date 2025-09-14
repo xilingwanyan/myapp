@@ -1,6 +1,5 @@
 plugins {
     id("com.android.application")
-    id("kotlin-android")
     id("org.jetbrains.kotlin.plugin.compose")
     id("org.jetbrains.kotlin.android")
 }
@@ -19,19 +18,19 @@ android {
     }
     signingConfigs {
         create("release") {
-            storeFile = file("$rootDir/app/key/release/android-release.myapp.keystore") // 密钥库路径
-            storePassword = "CNesynwW4lQ8X0XVQ1n" // 密钥库密码
-            keyAlias = "myapp_release" // 密钥别名
-            keyPassword = "CNesynwW4lQ8X0XVQ1n" // 密钥密码（与storePassword相同）
+            storeFile = file("${key.release}") // 密钥库路径
+            storePassword = "${key.release.password}" // 密钥库密码
+            keyAlias = "${key.release.alias}" // 密钥别名
+            keyPassword = "${key.release.password}" // 密钥密码（与storePassword相同）
             enableV1Signing = false
             enableV2Signing = true
             enableV3Signing = true
         }
         create("debugs") {
-            storeFile = file("$rootDir/app/key/debug/android-debug.myapp.keystore") // 密钥库路径
-            storePassword = "wDIi5ca4t4Ajgp4vMYo" // 密钥库密码
-            keyAlias = "myapp_debug" // 密钥别名
-            keyPassword = "wDIi5ca4t4Ajgp4vMYo" // 密钥密码（与storePassword相同）
+            storeFile = file("${key.debug}") // 密钥库路径
+            storePassword = "${key.debug.password}" // 密钥库密码
+            keyAlias = "${key.debug.alias}" // 密钥别名
+            keyPassword = "${key.debug.password}" // 密钥密码（与storePassword相同）
             enableV1Signing = false
             enableV2Signing = true
             enableV3Signing = true

@@ -87,3 +87,5 @@ lint/tmp/
 /gradle.properties
 /.androidide/
 kls_database.db
+editorconfig
+/.keystore.properties
