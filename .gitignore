@@ -89,3 +89,4 @@ lint/tmp/
 kls_database.db
 editorconfig
 /.keystore.properties
+/app/key
