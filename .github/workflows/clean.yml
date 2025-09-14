@@ -26,6 +26,11 @@ jobs:
         key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           gradle-${{ runner.os }}-
+    - name: Cache Android SDK
+      uses: actions/cache@v3
+     with:
+      path: ~/.android/build-cache
+       key: android-${{ runner.os }}-${{ hashFiles('**/build.gradle*') }}
     - name: set up JDK 17
       uses: actions/setup-java@v4
       with:
