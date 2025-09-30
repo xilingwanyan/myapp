@@ -37,8 +37,11 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
-    - name: mkdir cache Android SDK
-      run: sudo mkdir -p  $ANDROID_SDK_ROOT
+    - name: Create Android SDK directory
+      run: mkdir -p $HOME/android-sdk
+    - name: Set ANDROID_SDK_ROOT
+      run: echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
+
     - name: Cache Android SDK
       uses: actions/cache@v4
       with:
