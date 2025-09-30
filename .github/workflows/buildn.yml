@@ -42,8 +42,10 @@ jobs:
       uses: actions/cache@v3
       with:
         path: $ANDROID_SDK_ROOT
-        key: android-${{ runner.os }}-${{ hashFiles('**/build.gradle*') }}
-    
+        key: android-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+        restore-keys: |
+          android-${{ runner.os }}-
+
     - name: Set up Android SDK
       uses: android-actions/setup-android@v3
       with:
