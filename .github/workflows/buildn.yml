@@ -47,7 +47,7 @@ jobs:
           android-${{ runner.os }}-
 
     - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
+      uses: android-actions/setup-android@v4
       with:
         api-level: 35
         target: default
