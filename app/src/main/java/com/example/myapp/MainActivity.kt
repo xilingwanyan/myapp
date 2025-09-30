@@ -178,12 +178,10 @@ fun zhs(zhd: zh) {
                 )
                 AssistChip(
                     {
-                        Log.i("MainActivity" , "更改showDialog1为true")
-                        Int1 += 1
-                        showDialog1 = true
+                        Log.i("MainActivity" , runShell("ls"))
                     },
                     {
-                        Text("AssistChip")
+                        Text("AssistChip(ls)")
                     }
                 )
             }
@@ -259,7 +257,13 @@ fun zhs(zhd: zh) {
         )
     }
 }
-
+fun runShell(com: String): String {
+    val coms = Runtime.getRuntime().exec(com)
+    Log.i("MainActivity" , "将执行shell命令$com")
+    val shuchu = coms.inputStream.bufferedReader().readText()
+    coms.waitFor()
+    return shuchu
+}
 
 /*@Preview
 @Composable

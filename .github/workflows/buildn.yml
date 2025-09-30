@@ -30,22 +30,28 @@ jobs:
         key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           gradle-${{ runner.os }}-
-    - name: Cache Android SDK
-      uses: actions/cache@v3
-      with:
-        path: ~/.android/build-cache
-        key: android-${{ runner.os }}-${{ hashFiles('**/build.gradle*') }}
+
     - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
         distribution: 'temurin'
         cache: gradle
+        
+    - name: Cache Android SDK
+      uses: actions/cache@v3
+      with:
+        path: $ANDROID_SDK_ROOT
+        key: android-${{ runner.os }}-${{ hashFiles('**/build.gradle*')}
+    
     - name: Set up Android SDK
       uses: android-actions/setup-android@v3
       with:
-        api-level: 33
+        api-level: 35
         target: default
+
+    - name: Accept Android Licenses
+      run: yes | sdkmanager --licenses
 
     - name: Grant execute permission for gradlew
       run: chmod +x gradlew
