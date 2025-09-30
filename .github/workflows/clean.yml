@@ -26,6 +26,8 @@ jobs:
         key: gradle-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           gradle-${{ runner.os }}-
+    - name: mkdir cache Android SDK
+      run: mkdir -p  $ANDROID_SDK_ROOT
     - name: Cache Android SDK
       uses: actions/cache@v4
       with:
