@@ -41,11 +41,8 @@ jobs:
       # run: mkdir -p $HOME/android-sdk
     # - name: Set ANDROID_SDK_ROOT
       # run: echo "ANDROID_SDK_ROOT=$HOME/android-sdk" >> $GITHUB_ENV
-
-    - name: Set up Android SDK
-      uses: android-actions/setup-android@v3
-      with:
-        accept-android-sdk-licenses: true
+    - name: Create default SDK directory
+      run: sudo mkdir -p /usr/local/lib/android/sdk
     - name: Cache Android SDK
       uses: actions/cache@v4
       with:
@@ -53,6 +50,10 @@ jobs:
         key: android-${{ runner.os }}-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
         restore-keys: |
           android-${{ runner.os }}-
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v3
+      with:
+        accept-android-sdk-licenses: true
 
     - name: Accept Android Licenses
       run: yes | sdkmanager --licenses
